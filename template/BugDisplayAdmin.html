@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="static/asset3/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="static/assets3/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="static/assets3/images/img_2.png" style="height:640px;" alt="">
+                </div>
+                <div class="signup-form">
+                    <form  method="post" class="register-form" id="register-form">
+                        <h2>Bug Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"> Bug Name :</label>
+                                <input type="text" name="name" id="name" readonly placeholder={{Bug.BugName}} required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="BugID">Bug Id :</label>
+                                <input type="text" name="BugID" id="BugID" readonly placeholder={{Bug.id}}  required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="project">project details:</label>
+                            <textarea name="Project" id="Project"readonly placeholder={{Bug.Description}}  required/></textarea>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group">
+                              <label for="clientName">clientName</label>
+                            <input type="text" name="clientName" id="clientName" readonly placeholder={{Bug.Client_Name}}  >
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label >Client EmailId:</label>
+                                <div class="form-select">
+                                    <input type="text" name="clientEmailId" id="clientEmailId"readonly placeholder={{Bug.Email_of_client }}  required/>
+
+                                </div>
+                            </div>
+
+                        <div class="form-group">
+                            <label for="date">Date of Issue :</label>
+                            <input type="text" name="date" id="date" readonly placeholder={{Bug.BugDate}}  required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label >Bug Priority:</label>
+                             <input type="text" name="priority" id="priority" readonly placeholder={{Bug.BugPriority}}  required/>
+                            </div>
+
+                          <div class="form-group">
+                            <label for="staff">Select Staff:</label>
+                            <div class="form-select">
+                                <select name="selectedStaff" id="staff" >
+                                    <option >choose staff Member from the list</option>
+                                    {%for staff in All_staff%}
+
+                                    <option >{{staff.name}}</option>
+                                   {% endfor %}
+
+                                </select>
+                                   <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+
+
+                           <div class="form-group">
+                          <input type="Submit" name="Submit" class="submit" value="SUBMIT">
+                           </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="static/assets3/vendor/jquery/jquery.min.js"></script>
+    <script src="static/assets3/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

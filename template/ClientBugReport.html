@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Client Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="static/assets4/css/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"> CLIENT BUG REPORT</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-striped">
+						  <thead>
+						    <tr>
+							  <th>BugID</th>
+						      <th>BugName</th>
+						      <th>Description</th>
+						      <th>Environment</th>
+						      <th>BugDate</th>
+						      <th>ClientName</th>
+							  <th>BugPriority</th>
+						      <th>Status</th>
+							  <th>View</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						   {% for bug in Bugs%}
+						    <tr>
+
+						       <th scope="row">{{bug.id}}</th>
+						      <td>{{bug.BugName}}</td>
+						      <td>{{bug.Description}}</td>
+						      <td>{{bug.Environment}}</td>
+						      <td>{{bug.BugDate}}</td>
+							  <td>{{bug.Client_Name}}</td>
+							  <td>{{bug.BugPriority}}</td>
+                               <td>
+						       {% if bug.Status=="To Do" %}
+						          <a href="#" class="btn btn-danger">{{bug.Status}}</a>
+								{% endif %}
+
+							    {% if bug.Status=="In Progress"%}
+						          <a href="#" class="btn btn-warning">{{bug.Status}}</a>
+								{% endif %}
+
+								{% if bug.Status=="Done"%}
+						          <a href="#" class="btn btn-success">{{bug.Status}}</a>
+								{% endif %}
+							  </td>
+							  <td><a href={{url_for("BugInfoClient",TicketNo=bug.id)}} class="btn btn-primary">VIEW</a></td>
+						    </tr>
+                             {% endfor %}
+
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="static/assets4/jsjquery.min.js"></script>
+  <script src="static/assets4/jspopper.js"></script>
+  <script src="static/assets4/jsbootstrap.min.js"></script>
+  <script src="static/assets4/jsmain.js"></script>
+
+	</body>
+</html>
+

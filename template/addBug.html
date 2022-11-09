@@ -1,0 +1,103 @@
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link href="static/assets/css/main2.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Body of Form starts -->
+  	<div class="container">
+      <form method="post" autocomplete="on">
+		   <h3>  Add Bug Details</h3>
+        <!--First name-->
+    		<div class="box">
+          <label class="fl fontLabel"> BugName: </label>
+
+    			<div class="fr">
+    					<input type="text" name="BugName" placeholder="BugName"
+              class="textBox" autofocus="on" required>
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!--First name-->
+
+
+        <!--Second name-->
+    		<div class="box">
+          <label  class="fl fontLabel"> Description: </label>
+
+    			<div class="fr">
+    					<textarea  name="description"
+								   class="textBox" row="5"></textarea>
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+
+
+
+    		<!---Email ID---->
+    		<div class="box">
+          <label  class="fl fontLabel"> BugDate </label>
+
+    			<div class="fr">
+    					<input type="Date"  name="Date" placeholder="Date" class="textBox">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!--Email ID----->
+           <div class="box">
+          <label  class="fl fontLabel"> Area Path </label>
+
+    			<div class="fr">
+    					<input type="text"  name="areaPath" placeholder="path" class="textBox">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+
+    		<!---Password------>
+    		<div class="box">
+          <label  class="fl fontLabel"> Environment </label>
+
+    			<div class="fr">
+    					<input type="text"  name="environment" placeholder="environment" class="textBox">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+
+
+    		<!---Password---->
+          <div class="box">
+          <label  class="fl fontLabel"> BugPriority </label>
+
+    			<div class="fr">
+    					<div class="form-select">
+                                <select name="Bug_Priority" class="textBox">
+
+                                    <option value="high">High</option>
+                                    <option value="low">Low</option>
+
+                                </select>
+                                </div>
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+
+
+
+
+    		<!--Terms and Conditions------>
+
+    		<!--Terms and Conditions------>
+
+
+
+    		<!---Submit Button------>
+    		<div class="box" >
+    				<input type="Submit" name="Submit" class="submit" value="SUBMIT">
+    		</div>
+    		<!---Submit Button----->
+      </form>
+  </div>
+  <!--Body of Form ends--->
+  </body>
+</html>
