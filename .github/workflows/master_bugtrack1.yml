@@ -50,6 +50,8 @@ jobs:
         with:
           name: python-app
           path: .
+      - name: Save state
+        run: echo "::save-state name={new}::{1}"  
         
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
