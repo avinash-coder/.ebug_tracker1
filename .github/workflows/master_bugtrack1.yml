@@ -52,7 +52,9 @@ jobs:
           path: .
           
       - name: Azure Login
-        uses: Azure/login@v1  
+        uses: Azure/login@v1 
+        with:
+         creds: ${{ secrets..AZUREAPPSERVICE_PUBLISHPROFILE_0FBC026CAFC44C3B99571AA682ED331E}}
         
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
